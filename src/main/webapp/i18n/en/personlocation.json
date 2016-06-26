@@ -1,0 +1,27 @@
+{
+    "fadsiiApp": {
+        "personlocation" : {
+            "home": {
+                "title": "Personlocations",
+                "createLabel": "Create a new Personlocation",
+                "createOrEditLabel": "Create or edit a Personlocation",
+                "search": "Search for Personlocation"
+            },
+            "created": "A new Personlocation is created with identifier {{ param }}",
+            "updated": "A Personlocation is updated with identifier {{ param }}",
+            "deleted": "A Personlocation is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Personlocation {{ id }}?"
+            },
+            "detail": {
+                "title": "Personlocation"
+            },
+            "isprimary": "Isprimary",
+            "status": "Status",
+            "lastmodifiedby": "Lastmodifiedby",
+            "lastmodifieddatetime": "Lastmodifieddatetime",
+            "person": "Person",
+            "location": "Location"
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "roleorganizationperson",
+            "otherEntityName": "roleorganizationperson",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "organization"
+        },
+	  {
+            "relationshipName": "organizationlocation",
+            "otherEntityName": "organizationlocation",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "organization"
+      } 
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "100"
+        },
+		{
+            "fieldName": "status",
+            "fieldType": "Status",
+            "fieldValues": "Active,Pending",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lastmodifiedby",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldName": "lastmodifieddatetime",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }  
+    ],
+    "changelogDate": "20160626001050",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "organization",
+    "pagination": "pagination"
+}

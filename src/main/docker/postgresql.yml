@@ -1,0 +1,12 @@
+version: '2'
+services:
+    fadsii-postgresql:
+        container_name: fadsii-postgresql
+        image: postgres:9.5.2
+        # volumes:
+        #     - ~/volumes/jhipster/fadsii/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=fadsii
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

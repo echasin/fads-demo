@@ -1,0 +1,9 @@
+{
+    "fadsiiApp": {
+        "Status" : {
+            "null": "",
+            "Active": "Active",
+            "Pending": "Pending"
+        }
+    }
+}

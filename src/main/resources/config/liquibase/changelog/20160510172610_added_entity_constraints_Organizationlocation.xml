@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Organizationlocation.
+    -->
+    <changeSet id="20160510172610-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="organization_id"
+                                 baseTableName="organizationlocation"
+                                 constraintName="fk_organizationlocation_organization_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="organization"/>
+
+        <addForeignKeyConstraint baseColumnNames="location_id"
+                                 baseTableName="organizationlocation"
+                                 constraintName="fk_organizationlocation_location_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="location"/>
+
+    </changeSet>
+</databaseChangeLog>

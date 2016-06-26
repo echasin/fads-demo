@@ -1,0 +1,38 @@
+
+<div>
+    <h2><span translate="fadsiiApp.personlocation.detail.title">Personlocation</span> {{vm.personlocation.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="fadsiiApp.personlocation.isprimary">Isprimary</span></dt>
+        <dd>
+            <span>{{vm.personlocation.isprimary}}</span>
+        </dd>
+        <dt><span translate="fadsiiApp.personlocation.status">Status</span></dt>
+        <dd>
+            <span translate="{{'fadsiiApp.Status.' + vm.personlocation.status}}">{{vm.personlocation.status}}</span>
+        </dd>
+        <dt><span translate="fadsiiApp.personlocation.lastmodifiedby">Lastmodifiedby</span></dt>
+        <dd>
+            <span>{{vm.personlocation.lastmodifiedby}}</span>
+        </dd>
+        <dt><span translate="fadsiiApp.personlocation.lastmodifieddatetime">Lastmodifieddatetime</span></dt>
+        <dd>
+            <span>{{vm.personlocation.lastmodifieddatetime | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="fadsiiApp.personlocation.person">Person</span></dt>
+        <dd>
+            <a ui-sref="person-detail({id:vm.personlocation.person.id})">{{vm.personlocation.person.fullname}}</a>
+        </dd>
+        <dt><span translate="fadsiiApp.personlocation.location">Location</span></dt>
+        <dd>
+            <a ui-sref="location-detail({id:vm.personlocation.location.id})">{{vm.personlocation.location.addressline1}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

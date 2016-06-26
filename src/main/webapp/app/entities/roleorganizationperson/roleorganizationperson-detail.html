@@ -1,0 +1,38 @@
+
+<div>
+    <h2><span translate="fadsiiApp.roleorganizationperson.detail.title">Roleorganizationperson</span> {{vm.roleorganizationperson.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="fadsiiApp.roleorganizationperson.role">Role</span></dt>
+        <dd>
+            <span>{{vm.roleorganizationperson.role}}</span>
+        </dd>
+        <dt><span translate="fadsiiApp.roleorganizationperson.status">Status</span></dt>
+        <dd>
+            <span translate="{{'fadsiiApp.Status.' + vm.roleorganizationperson.status}}">{{vm.roleorganizationperson.status}}</span>
+        </dd>
+        <dt><span translate="fadsiiApp.roleorganizationperson.lastmodifiedby">Lastmodifiedby</span></dt>
+        <dd>
+            <span>{{vm.roleorganizationperson.lastmodifiedby}}</span>
+        </dd>
+        <dt><span translate="fadsiiApp.roleorganizationperson.lastmodifieddatetime">Lastmodifieddatetime</span></dt>
+        <dd>
+            <span>{{vm.roleorganizationperson.lastmodifieddatetime | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="fadsiiApp.roleorganizationperson.organization">Organization</span></dt>
+        <dd>
+            <a ui-sref="organization-detail({id:vm.roleorganizationperson.organization.id})">{{vm.roleorganizationperson.organization.name}}</a>
+        </dd>
+        <dt><span translate="fadsiiApp.roleorganizationperson.person">Person</span></dt>
+        <dd>
+            <a ui-sref="person-detail({id:vm.roleorganizationperson.person.id})">{{vm.roleorganizationperson.person.lastname}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,38 @@
+
+<div>
+    <h2><span translate="fadsiiApp.organizationlocation.detail.title">Organizationlocation</span> {{vm.organizationlocation.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="fadsiiApp.organizationlocation.isprimary">Isprimary</span></dt>
+        <dd>
+            <span>{{vm.organizationlocation.isprimary}}</span>
+        </dd>
+        <dt><span translate="fadsiiApp.organizationlocation.status">Status</span></dt>
+        <dd>
+            <span translate="{{'fadsiiApp.Status.' + vm.organizationlocation.status}}">{{vm.organizationlocation.status}}</span>
+        </dd>
+        <dt><span translate="fadsiiApp.organizationlocation.lastmodifiedby">Lastmodifiedby</span></dt>
+        <dd>
+            <span>{{vm.organizationlocation.lastmodifiedby}}</span>
+        </dd>
+        <dt><span translate="fadsiiApp.organizationlocation.lastmodifieddatetime">Lastmodifieddatetime</span></dt>
+        <dd>
+            <span>{{vm.organizationlocation.lastmodifieddatetime | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="fadsiiApp.organizationlocation.organization">Organization</span></dt>
+        <dd>
+            <a ui-sref="organization-detail({id:vm.organizationlocation.organization.id})">{{vm.organizationlocation.organization.name}}</a>
+        </dd>
+        <dt><span translate="fadsiiApp.organizationlocation.location">Location</span></dt>
+        <dd>
+            <a ui-sref="location-detail({id:vm.organizationlocation.location.id})">{{vm.organizationlocation.location.addressline1}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

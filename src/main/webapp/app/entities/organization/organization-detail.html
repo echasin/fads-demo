@@ -1,0 +1,30 @@
+
+<div>
+    <h2><span translate="fadsiiApp.organization.detail.title">Organization</span> {{vm.organization.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="fadsiiApp.organization.name">Name</span></dt>
+        <dd>
+            <span>{{vm.organization.name}}</span>
+        </dd>
+        <dt><span translate="fadsiiApp.organization.status">Status</span></dt>
+        <dd>
+            <span translate="{{'fadsiiApp.Status.' + vm.organization.status}}">{{vm.organization.status}}</span>
+        </dd>
+        <dt><span translate="fadsiiApp.organization.lastmodifiedby">Lastmodifiedby</span></dt>
+        <dd>
+            <span>{{vm.organization.lastmodifiedby}}</span>
+        </dd>
+        <dt><span translate="fadsiiApp.organization.lastmodifieddatetime">Lastmodifieddatetime</span></dt>
+        <dd>
+            <span>{{vm.organization.lastmodifieddatetime | date:'medium'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

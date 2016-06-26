@@ -1,0 +1,71 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "roleorganizationperson",
+            "otherEntityName": "roleorganizationperson",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "person"
+        },
+        {
+            "relationshipName": "personlocation",
+            "otherEntityName": "personlocation",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "person"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "firstname",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+           {
+            "fieldName": "lastname",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+		{
+            "fieldName": "fullname",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "100"
+        },
+		{
+            "fieldName": "status",
+            "fieldType": "Status",
+            "fieldValues": "Active,Pending",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lastmodifiedby",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldName": "lastmodifieddatetime",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }  
+    ],
+    "changelogDate": "20160626004634",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "person",
+    "pagination": "pagination"
+}

@@ -1,0 +1,135 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myLocationLabel" translate="fadsiiApp.location.home.createOrEditLabel">Create or edit a Location</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.location.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.location.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="fadsiiApp.location.addressline1" for="field_addressline1">Addressline 1</label>
+            <input type="text" class="form-control" name="addressline1" id="field_addressline1"
+                    ng-model="vm.location.addressline1"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.addressline1.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.addressline1.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="fadsiiApp.location.addressline2" for="field_addressline2">Addressline 2</label>
+            <input type="text" class="form-control" name="addressline2" id="field_addressline2"
+                    ng-model="vm.location.addressline2"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.addressline2.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.addressline2.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="fadsiiApp.location.city" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                    ng-model="vm.location.city"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.city.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.city.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="fadsiiApp.location.statecode" for="field_statecode">Statecode</label>
+            <input type="text" class="form-control" name="statecode" id="field_statecode"
+                    ng-model="vm.location.statecode"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.statecode.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.statecode.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="fadsiiApp.location.zippostcode" for="field_zippostcode">Zippostcode</label>
+            <input type="text" class="form-control" name="zippostcode" id="field_zippostcode"
+                    ng-model="vm.location.zippostcode"
+                    ng-maxlength="25" />
+            <div ng-show="editForm.zippostcode.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.zippostcode.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="25">
+                    This field cannot be longer than 25 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="fadsiiApp.location.status" for="field_status">Status</label>
+            <select class="form-control" name="status" ng-model="vm.location.status" id="field_status" required>
+                <option value="Active" translate="fadsiiApp.Status.Active">Active</option>
+                <option value="Pending" translate="fadsiiApp.Status.Pending">Pending</option>
+            </select>
+            <div ng-show="editForm.status.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.status.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="fadsiiApp.location.lastmodifiedby" for="field_lastmodifiedby">Lastmodifiedby</label>
+            <input type="text" class="form-control" name="lastmodifiedby" id="field_lastmodifiedby"
+                    ng-model="vm.location.lastmodifiedby"
+                    required ng-maxlength="50" />
+            <div ng-show="editForm.lastmodifiedby.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.lastmodifiedby.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.lastmodifiedby.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="fadsiiApp.location.lastmodifieddatetime" for="field_lastmodifieddatetime">Lastmodifieddatetime</label>
+                <div class="input-group">
+                    <input id="field_lastmodifieddatetime" type="text" class="form-control" name="lastmodifieddatetime" datetime-picker="{{dateformat}}" ng-model="vm.location.lastmodifieddatetime" is-open="vm.datePickerOpenStatus.lastmodifieddatetime"
+                    required  />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('lastmodifieddatetime')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.lastmodifieddatetime.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.lastmodifieddatetime.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.lastmodifieddatetime.$error.ZonedDateTimelocal" translate="entity.validation.ZonedDateTimelocal">
+                    This field should be a date and time.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

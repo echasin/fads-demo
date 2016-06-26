@@ -1,0 +1,27 @@
+{
+    "fadsiiApp": {
+        "roleorganizationperson" : {
+            "home": {
+                "title": "Roleorganizationpeople",
+                "createLabel": "Create a new Roleorganizationperson",
+                "createOrEditLabel": "Create or edit a Roleorganizationperson",
+                "search": "Search for Roleorganizationperson"
+            },
+            "created": "A new Roleorganizationperson is created with identifier {{ param }}",
+            "updated": "A Roleorganizationperson is updated with identifier {{ param }}",
+            "deleted": "A Roleorganizationperson is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Roleorganizationperson {{ id }}?"
+            },
+            "detail": {
+                "title": "Roleorganizationperson"
+            },
+            "role": "Role",
+            "status": "Status",
+            "lastmodifiedby": "Lastmodifiedby",
+            "lastmodifieddatetime": "Lastmodifieddatetime",
+            "organization": "Organization",
+            "person": "Person"
+        }
+    }
+}
