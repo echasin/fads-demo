@@ -5,7 +5,7 @@
     "packageName": "com.innvo",
     "packageFolder": "com/innvo",
     "serverPort": "8080",
-    "authenticationType": "jwt",
+    "authenticationType": "oauth2",
     "hibernateCache": "ehcache",
     "clusteredHttpSession": "no",
     "websocket": "no",
@@ -14,8 +14,6 @@
     "prodDatabaseType": "postgresql",
     "searchEngine": "elasticsearch",
     "buildTool": "maven",
-    "enableSocialSignIn": false,
-    "jwtSecretKey": "55824cd6ecb3567e7386482888bc310a2a5b5c46",
     "useSass": false,
     "applicationType": "monolith",
     "testFrameworks": [
@@ -28,6 +26,7 @@
     "nativeLanguage": "en",
     "languages": [
       "en"
-    ]
+    ],
+    "enableSocialSignIn": false
   }
 }

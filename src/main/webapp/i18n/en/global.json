@@ -7,13 +7,12 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entities",
-                "organization": "Organization",
-                "roleOrganizationPerson": "Role Organization Person",
-                "person": "Person",
-                "roleorganizationperson": "Roleorganizationperson",
                 "location": "Location",
                 "organizationlocation": "Organizationlocation",
                 "personlocation": "Personlocation",
+                "organization": "Organization",
+                "roleorganizationperson": "Roleorganizationperson",
+                "person": "Person",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
