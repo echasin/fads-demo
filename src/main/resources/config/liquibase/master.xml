@@ -15,5 +15,12 @@
     <include file="classpath:config/liquibase/changelog/20160510172610_added_entity_constraints_Organizationlocation.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20160510172610_added_entity_constraints_Personlocation.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20160626001250_added_entity_constraints_Roleorganizationperson.xml" relativeToChangelogFile="false"/>
+   
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+	<!-- DATA LOADING FILES  -->
+	<include file="classpath:config/liquibase/changelog/load_data.xml" relativeToChangelogFile="false"/>
+
+
+
+
 </databaseChangeLog>
