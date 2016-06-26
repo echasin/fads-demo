@@ -67,10 +67,11 @@ jhipster:
             maxBytesLocalHeap: 256M
     security:
         authentication:
-            jwt:
-                secret: 55824cd6ecb3567e7386482888bc310a2a5b5c46
-                # Token is valid 24 hours
-                tokenValidityInSeconds: 86400
+            oauth:
+                clientid: fadsiiapp
+                secret: my-secret-token-to-change-in-production
+                # Token is valid 30 minutes
+                tokenValidityInSeconds: 1800
     mail: # specific JHipster mail property, for standard properties see MailProperties
         from: fadsii@localhost
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
