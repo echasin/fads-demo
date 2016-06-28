@@ -1,5 +1,7 @@
 # fadsii
 
+[![Join the chat at https://gitter.im/echasin/fads-demo](https://badges.gitter.im/echasin/fads-demo.svg)](https://gitter.im/echasin/fads-demo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This application was generated using JHipster, you can find documentation and help at [https://jhipster.github.io](https://jhipster.github.io).
 
 ## Development
